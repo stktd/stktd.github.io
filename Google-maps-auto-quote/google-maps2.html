@@ -138,7 +138,7 @@
           origins: [origin1, origin2],
           destinations: [destinationA, destinationB],
           travelMode: 'DRIVING',
-          unitSystem: google.maps.UnitSystem.METRIC,
+          unitSystem: google.maps.UnitSystem.IMPERIAL,
           avoidHighways: false,
           avoidTolls: false
         }, function(response, status) {
@@ -176,7 +176,7 @@
                     showGeocodedAddressOnMap(true)); 
                   
                 var distance = results[j].distance.text;
-                var distance = distance.replace("km", "");
+                var distance = distance.replace("miles", "");
                 var disnum = parseFloat(distance) * 1.1;
                 
                 outputDiv.innerHTML += 
